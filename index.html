@@ -354,7 +354,7 @@
                       <li data-menuanchor="contact" class="list-group-item">
                         <a href="#contact">Contact Us</a>
                       </li>
-         
+
                       <li data-menuanchor="blog" class="list-group-item">
                         <a href="#blog">Blog</a>
                       </li>
@@ -868,16 +868,16 @@
                       </p>
                     </div>
                     <div
-                    class="coding_language_icon mt-2 d-flex justify-content-end"
-                  >
-                    <p class="badge badge-danger mx-1">React JS</p>
-                    <p class="badge badge-danger">CSS</p>
-                    <p class="badge badge-danger mx-1">Bootstrap</p>
+                      class="coding_language_icon mt-2 d-flex justify-content-end"
+                    >
+                      <p class="badge badge-danger mx-1">React JS</p>
+                      <p class="badge badge-danger">CSS</p>
+                      <p class="badge badge-danger mx-1">Bootstrap</p>
 
-                    <p class="badge badge-danger">JQuery</p>
+                      <p class="badge badge-danger">JQuery</p>
 
-                    <p class="badge badge-danger mx-1">JS</p>
-                  </div>
+                      <p class="badge badge-danger mx-1">JS</p>
+                    </div>
                   </div>
                 </div>
                 <!-- Item 02 -->
@@ -896,10 +896,10 @@
                       </p>
                     </div>
                     <div
-                    class="coding_language_icon mt-2 d-flex justify-content-end"
-                  >
-                    <p class="badge badge-danger mx-1">Bootstrap</p>
-                  </div>
+                      class="coding_language_icon mt-2 d-flex justify-content-end"
+                    >
+                      <p class="badge badge-danger mx-1">Bootstrap</p>
+                    </div>
                   </div>
                 </div>
                 <!-- Item 03 -->
@@ -1056,7 +1056,7 @@
                       >Web Design / dev's</a
                     >
                   </li>
-                  
+
                   <li class="list-inline-item">
                     <a href="#" data-filter=".mobiledesign" class="my-1"
                       >Mobile Design</a
@@ -1688,7 +1688,12 @@
                 </div>
                 <div class="col-lg-6 text-left">
                   <h6 class="font-weight-semibold">How can I help you ?</h6>
-                  <form id="contactForm" class="form mt-3">
+                  <form
+                    id="contactForm"
+                    method="post"
+                    action="config.php"
+                    class="form mt-3"
+                  >
                     <div class="row">
                       <div class="col-lg-12 form-item">
                         <div class="form-group">
@@ -1717,6 +1722,20 @@
                           />
                         </div>
                       </div>
+                      <div class="col-lg-12 form-item">
+                        <div class="form-group">
+                          <input
+                            name="phone"
+                            id="phone"
+                            type="tel"
+                            class="form-control"
+                            data-email-error="Phone is required"
+                            data-email-valid="Phone is not valid"
+                            placeholder="Your Phone Number*"
+                            required
+                          />
+                        </div>
+                      </div>
                       <div class="col-12 form-item">
                         <div class="form-group">
                           <textarea
@@ -1726,18 +1745,19 @@
                             class="form-control h-auto"
                             data-comment-error="Comments is required"
                             placeholder="Your message..."
+                            required
                           ></textarea>
                         </div>
                       </div>
                       <div class="col-sm-12 mt-1 text-left">
-                        <button
+                        <!-- <button
                           type="button"
                           class="pill-button"
                           id="submit-btn"
-                          onclick="sendEmail()"
                         >
                           Send Message
-                        </button>
+                        </button> -->
+                        <input type="submit" class="pill-button" value="Send Message">
                         <div
                           id="message"
                           class="toast text-white shadow-none border-0"
